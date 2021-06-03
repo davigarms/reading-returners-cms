@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "name": "books",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "active": {
+      "type": "boolean",
+      "required": true
+    },
+    "rating_avg": {
+      "type": "integer",
+      "max": 5,
+      "min": 0
+    },
+    "categories": {
+      "via": "books",
+      "collection": "categories",
+      "dominant": true
+    },
+    "edition": {
+      "type": "integer",
+      "required": false,
+      "min": 1
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "publisher": {
+      "type": "string",
+      "required": false
+    },
+    "ISBN": {
+      "type": "string"
+    },
+    "reviews": {
+      "via": "book",
+      "collection": "reviews"
+    }
+  }
+}
