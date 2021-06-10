@@ -1,4 +1,4 @@
-# Reading Returners Strapi CMS
+# A Strapi CMS playground
 
 ## Available commands in this project:
 
